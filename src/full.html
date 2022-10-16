@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .product{
+            width: 90%;
+            margin:0px auto;
+            background-color: #fff;
+            border: 2px solid red;
+            margin: 20px;
+            text-align: center;
+        }
+        .row p{
+            text-align: center;
+            color: #000;
+            margin: 5px 0;
+        }
+        .row button{
+            width: ;
+            margin: 5px 10px;
+            background-color: #fff;
+        }
+        .row img{
+            width: 100%;
+            background-color: transparent;
+        }
+
+
+    @media screen and (min-width:1200px) {
+        .item{
+            display: flex;
+        }
+        .product{
+            background-color: yellow;
+            /* float: left; */
+            /* margin: auto; */
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="row">
+        <NavBar />
+        <!-- <ul>
+            <li v-for="p in productList" :key="p.id">{{p.name}}</li>
+        </ul> -->
+        <div class="item">
+            <div class="product">
+                <img src="https://picsum.photos/200/300?random=1" alt="">
+                <p>lorem</p>
+                <div class="button">
+                    <button>商品介紹</button>
+                    <button>加入購物車</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="https://picsum.photos/200/300?random=1" alt="">
+                <p>lorem</p>
+                <div class="button">
+                    <button>商品介紹</button>
+                    <button>加入購物車</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="https://picsum.photos/200/300?random=1" alt="">
+                <p>lorem</p>
+                <div class="button">
+                    <button>商品介紹</button>
+                    <button>加入購物車</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="https://picsum.photos/200/300?random=1" alt="">
+                <p>lorem</p>
+                <div class="button">
+                    <button>商品介紹</button>
+                    <button>加入購物車</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
