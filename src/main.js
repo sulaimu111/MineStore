@@ -7,12 +7,20 @@ import router from './router'
 
 import store from './store'
 
+import { Table,TableColumn } from 'element-ui';
+
 Vue.config.productionTip = false
 
 Vue.use(VueRouter)
 
+Vue.component(Table.name, Table);
+Vue.component(TableColumn.name, TableColumn);
+
 new Vue({
-  render: h => h(App),
-  router:router,
-  store
+	render: h => h(App),
+	router:router,
+	store,
+	beforeCreate(){
+		Vue.prototype.$bus = this //安裝全局事件總線，bus在這邊是總線的意思
+	}
 }).$mount('#app')

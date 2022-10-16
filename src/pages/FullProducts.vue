@@ -7,8 +7,9 @@
                     <img :src="p.location" alt="" style="width:100px; height:100px">
                     <!-- <img src="../../public/products_img/Minecraft_cover.png" alt="" style="width:100px; height:100px"> -->
                     <p>{{p.name}}</p>
-                    <button>商品介紹</button>
-                    <button style="background-color:rgb(104, 202, 179);">加入購物車</button>
+                    <p style="color:blue;">${{p.price}}</p>
+                    <button>Detail</button>
+                    <button style="background-color:rgb(104, 202, 179);" @click="addToCart(p)">Add to cart</button>
                 </div>
             </div>
         </div>
@@ -27,6 +28,14 @@
         computed:{
             productList(){
                 return this.$store.state.productList
+            }
+        },
+        methods:{
+            addToCart(p){
+                console.log(p)
+                // this.$store.commit('ADD_CART', p)
+                this.$bus.$emit('AddProductToCart', p)
+                this.$store.commit('ADD_CART', p)
             }
         },
         mounted(){
@@ -81,6 +90,7 @@
     @media screen and (min-width:768px) {
         .item{
             margin-top: 5px;
+            padding-bottom: 15px;
             /* display: flex; */
             width: 100%;
             

@@ -12,8 +12,8 @@
             <nav>
                 <router-link to="/home">HOME</router-link>
                 <router-link to="/products">PRODUCT</router-link>
-                <router-link to="/product">shopping cart</router-link>
-                <router-link to="/Contact">Contact Us</router-link>
+                <router-link to="/shoppingcart">SHOPPING CART</router-link>
+                <router-link to="/Contact">CONTACT US</router-link>
             </nav>
         </div>
         

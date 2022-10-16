@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../pages/Home'
 import Products from '../pages/Products'
 import FullProducts from '../pages/FullProducts'
+import ShoppingCart from '../pages/ShoppingCart'
 
 export default new VueRouter({
     routes:[
@@ -25,7 +26,10 @@ export default new VueRouter({
                     component:FullProducts
                 }
             ]
+        },
+        {
+            path:'/shoppingcart',
+            component:ShoppingCart
         }
-        
     ]
 })

@@ -14,15 +14,15 @@
             </nav>
             <router-view></router-view>
         </div>
-        <Chest></Chest>
-        <Footer></Footer>
+        <Chest />
+        <MyFooter />
     </div>
 </template>
 
 <script>
     import NavBar from '../components/NavBar'
     import Slide from '../components/Slide'
-    import Footer from '../components/Footer'
+    import MyFooter from '../components/MyFooter'
     import Chest from '../components/Chest'
 
     export default {
@@ -30,7 +30,7 @@
         components:{
             NavBar,
             Slide,
-            Footer,
+            MyFooter,
             Chest
         },
         computed:{
