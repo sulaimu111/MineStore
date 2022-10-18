@@ -3,6 +3,7 @@
         <NavBar />
         <Slide />
         <div class="contact">
+            <br>
             <h1>Contact Us</h1>
             <p>email: minecraft@example.com</p>
             <p>telephone: 0800-000-000</p>

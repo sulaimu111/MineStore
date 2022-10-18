@@ -6,8 +6,8 @@
             <table>
                 <tr>
                     <th>Product Name</th>
-                    <th>Quantity</th>
                     <th>Price</th>
+                    <th>Quantity</th>
                     <th>delete</th>
                 </tr>
                 <tr v-for="(c, index) in cartList" :key="index">

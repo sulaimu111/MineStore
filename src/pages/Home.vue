@@ -3,7 +3,8 @@
         <div class="wrap">
             <NavBar />
             <Slide />
-            <h1 style="color:#fff">Keep Building...</h1>
+            <br>
+            <h1 style="color:#fff">Home still under construction...</h1>
             <Chest />
             <div class="main-win"></div>
         </div>
