@@ -1,7 +1,11 @@
 <template>
     <div class="cart" @click="cart">
-        <img src="../assets/products_img/Chest.webp" alt="">
-        <div class="cartNum">{{cartNum}}</div>
+        
+        <router-link to="/shoppingcart">
+            <img src="../assets/products_img/Chest.webp" alt="">
+            <div class="cartNum">{{cartNum}}</div>
+        </router-link>
+        
         <!-- <router-link :to="/shoppingcart"></router-link> -->
     </div>
 </template>
@@ -16,8 +20,12 @@
         },
         computed:{
             cartNum(){
-                return JSON.parse(localStorage.getItem('Cart')).length
-            }
+                return this.$store.state.cartList.length
+            },
+        },
+        mounted(){
+            this.$store.commit('GET_CART')
+            // console.log('mounted', this.$store.state.cartList)
         }
     }
 </script>
@@ -32,6 +40,7 @@
         background: url('../assets/products_img/Chest.webp') no-repeat;
         background: none;
         transition: .5s;
+        z-index: 1;
     }
     .cartNum{
         width: 30px;
@@ -44,6 +53,7 @@
         border: 3px solid #fff;
         border-radius: 50%;
         font-size: 20px;
+        z-index: 1;
     }
 
     @media screen and (min-width:768px) {

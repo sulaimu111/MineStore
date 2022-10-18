@@ -24,16 +24,31 @@
 			AddToCart(product){
 				console.log('product', product)
 				this.Cart.unshift(product)
-				console.log(this.Cart)
+				
+			},
+			DeleteCart(id){
+				this.Cart = this.Cart.filter((item)=>{
+					return item.id != id
+				})
+				console.log('APP', this.Cart)
+			},
+			ClearCart(){
+				while(this.Cart.length){
+					this.Cart.pop()
+				}
 			}
 		},
 		mounted(){
 			this.$bus.$on('AddProductToCart', this.AddToCart)
+			this.$bus.$on('DeleteCart', this.DeleteCart)
+			this.$bus.$on('ClearCart', this.ClearCart)
 			console.log(this)
 			// this.$store.commit('GET_CART')
 		},
 		beforeDestroy(){
 			this.$bus.$off('AddProductToCart')
+			this.$bus.$off('DeleteCart')
+			this.$bus.$off('ClearCart')
 		}
 	}
 </script>

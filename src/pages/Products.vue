@@ -8,9 +8,9 @@
         <div class="productSort">
             <nav>
                 <router-link active-class="active" to="/products/fullproducts">Full</router-link>
-                <router-link to="/products">Pickaxe</router-link>
-                <router-link to="/product">Sword</router-link>
-                <router-link to="/Contact">Others</router-link>
+                <router-link to="/products/notfinished">Pickaxe</router-link>
+                <router-link to="/products/notfinished">Sword</router-link>
+                <router-link to="/products/notfinished">Others</router-link>
             </nav>
             <router-view></router-view>
         </div>

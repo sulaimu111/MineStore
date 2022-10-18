@@ -4,8 +4,11 @@ import Home from '../pages/Home'
 import Products from '../pages/Products'
 import FullProducts from '../pages/FullProducts'
 import ShoppingCart from '../pages/ShoppingCart'
+import CheckOut from '../pages/CheckOut'
+import NotFinished from '../pages/NotFinished'
+import ContactUs from '../pages/ContactUs'
 
-export default new VueRouter({
+const router = new VueRouter({
     routes:[
         {
             path:'*',
@@ -24,12 +27,48 @@ export default new VueRouter({
                 {
                     path:'fullproducts',
                     component:FullProducts
+                },
+                {
+                    path:'notfinished',
+                    component:NotFinished
                 }
             ]
         },
         {
             path:'/shoppingcart',
             component:ShoppingCart
+        },
+        {
+            path:'/checkout',
+            component:CheckOut,
+            meta:{isAuth:true, title:'Checkout'}
+        },
+        {
+            path:'/contactus',
+            component:ContactUs,
+            
         }
     ]
 })
+
+
+router.beforeEach((to, from, next)=>{
+    next()
+    if(to.meta.isAuth){
+        if(JSON.parse(localStorage.getItem('Cart')).length == 0){
+            alert("Cart can't be empty")
+            router.push({path:'/shoppingcart'})
+        }
+        else{
+            next()
+        }
+    }
+    else{
+        next()
+    }
+})
+
+
+
+
+export default router

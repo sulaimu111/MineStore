@@ -9,7 +9,7 @@
                     <p>{{p.name}}</p>
                     <p style="color:blue;">${{p.price}}</p>
                     <button>Detail</button>
-                    <button style="background-color:rgb(104, 202, 179);" @click="addToCart(p)">Add to cart</button>
+                    <button class="addBtn" @click="addToCart(p)">Add to cart</button>
                 </div>
             </div>
         </div>
@@ -19,9 +19,15 @@
 
 <script>
     import NavBar from '../components/NavBar'
+    import {nanoid} from 'nanoid'
 
     export default {
         name:'Products',
+        data(){
+            return {
+                CartP:[]
+            }
+        },
         components:{
             NavBar
         },
@@ -32,10 +38,13 @@
         },
         methods:{
             addToCart(p){
-                console.log(p)
+                // console.log(p)
+                this.CartP = {...p, id:nanoid()}
+                console.log(this.CartP)
                 // this.$store.commit('ADD_CART', p)
-                this.$bus.$emit('AddProductToCart', p)
-                this.$store.commit('ADD_CART', p)
+                this.$bus.$emit('AddProductToCart', this.CartP)
+                this.$store.commit('ADD_CART', this.CartP)
+                
             }
         },
         mounted(){
@@ -56,6 +65,12 @@
     }
     .product img{
         margin-top: 10px;
+    }
+    .product .addBtn{
+        background-color:rgb(104, 202, 179);
+    }
+    .row{
+        
     }
     .row p{
         color: #000;
@@ -79,11 +94,13 @@
         width: 340px;
         margin: 0 auto;
         border-radius: 5px;
+        margin-bottom: 60px;
     }
     .item h1{
         margin-top: 10px;
         color: #fff;
     }
+    
     
 
 
@@ -114,6 +131,9 @@
             padding: 0;
             margin: 10px 20px;
             /* margin: auto; */
+        }
+        .product .addBtn:active{
+        background-color:rgb(198, 233, 225);
         }
     }
 </style>

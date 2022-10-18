@@ -21,6 +21,27 @@ const mutations={
     },
     DELETE_PRODUCT(state, id){
         console.log('mutation中的DELETE_PRODUCT被調用', id)
+        state.cartList = state.cartList.filter((product)=>{
+            return product.id != id
+        })
+        localStorage.setItem('Cart', JSON.stringify(state.cartList))
+    }
+}
+
+const getters={
+    SumPrice(){
+        let i = 0
+        console.log('mutation中的SumPrice被調用')
+        
+        JSON.parse(localStorage.getItem('Cart')).forEach(item => {
+            i += Number(item.price)
+        });
+        return i
+        // console.log(state.cartList)
+        // return state.cartList.forEach((item)=>{
+        //     i += item.price
+        //     return i
+        // })
     }
 }
 
@@ -43,5 +64,6 @@ const state={
 export default new Vuex.Store({
     actions,
     mutations,
+    getters,
     state
 })

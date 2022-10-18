@@ -13,7 +13,7 @@
                 <router-link to="/home">HOME</router-link>
                 <router-link to="/products">PRODUCT</router-link>
                 <router-link to="/shoppingcart">SHOPPING CART</router-link>
-                <router-link to="/Contact">CONTACT US</router-link>
+                <router-link to="/contactus">CONTACT US</router-link>
             </nav>
         </div>
         
