@@ -1,7 +1,7 @@
 <template>
     <div>
         <NavBar />
-        <Slide />
+        <MySlide />
         <div class="contact">
             <br>
             <h1>Contact Us</h1>
@@ -15,7 +15,7 @@
 
 <script>
     import NavBar from '../components/NavBar'
-    import Slide from '../components/Slide'
+    import MySlide from '../components/MySlide'
     import MyFooter from '../components/MyFooter'
     import Chest from '../components/Chest'
 
@@ -23,7 +23,7 @@
         name:'ContactUs',
         components:{
             NavBar,
-            Slide,
+            MySlide,
             MyFooter,
             Chest
         }
@@ -31,6 +31,9 @@
 </script>
 
 <style scoped>
+    .contact{
+        margin-bottom: 100px;
+    }
     .contact h1{
         color: #fff;
     }

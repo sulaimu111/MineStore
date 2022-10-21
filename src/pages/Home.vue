@@ -2,7 +2,7 @@
     <div>
         <div class="wrap">
             <NavBar />
-            <Slide />
+            <MySlide />
             <br>
             <h1 style="color:#fff">Home still under construction...</h1>
             <Chest />
@@ -14,7 +14,7 @@
 
 <script>
     import NavBar from '../components/NavBar'
-    import Slide from '../components/Slide'
+    import MySlide from '../components/MySlide'
     import Chest from '../components/Chest'
     import MyFooter from '../components/MyFooter'
 
@@ -22,7 +22,7 @@
         name:'Home',
         components:{
             NavBar,
-            Slide,
+            MySlide,
             Chest,
             MyFooter
         }

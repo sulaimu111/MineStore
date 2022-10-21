@@ -9,12 +9,16 @@ import store from './store'
 
 import { Table,TableColumn } from 'element-ui';
 
+import VueCarousel from 'vue-carousel';
+
 Vue.config.productionTip = false
 
 Vue.use(VueRouter)
+Vue.use(VueCarousel);
 
 Vue.component(Table.name, Table);
 Vue.component(TableColumn.name, TableColumn);
+
 
 new Vue({
 	render: h => h(App),

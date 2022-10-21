@@ -5,8 +5,11 @@ import Products from '../pages/Products'
 import FullProducts from '../pages/FullProducts'
 import ShoppingCart from '../pages/ShoppingCart'
 import CheckOut from '../pages/CheckOut'
-import NotFinished from '../pages/NotFinished'
+// import NotFinished from '../pages/NotFinished'
 import ContactUs from '../pages/ContactUs'
+import Pickaxe from '../pages/Pickaxe'
+import Sword from '../pages/Sword'
+import Other from '../pages/Other'
 
 const router = new VueRouter({
     routes:[
@@ -29,8 +32,16 @@ const router = new VueRouter({
                     component:FullProducts
                 },
                 {
-                    path:'notfinished',
-                    component:NotFinished
+                    path:'pickaxe',
+                    component:Pickaxe
+                },
+                {
+                    path:'sword',
+                    component:Sword
+                },
+                {
+                    path:'other',
+                    component:Other
                 }
             ]
         },

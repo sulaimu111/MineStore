@@ -1,7 +1,7 @@
 <template>
     <div>
         <NavBar />
-        <Slide />
+        <MySlide />
         <div class="shoppingCart">
             <table>
                 <tr>
@@ -45,7 +45,7 @@
 
 <script>
     import NavBar from '../components/NavBar'
-    import Slide from '../components/Slide'
+    import MySlide from '../components/MySlide'
     import MyFooter from '../components/MyFooter'
     import Chest from '../components/Chest'
     import {mapState, mapGetters} from 'vuex'
@@ -54,7 +54,7 @@
         name:'ShoppingCart',
         components:{
             NavBar,
-            Slide,
+            MySlide,
             MyFooter,
             Chest
         },

@@ -1,7 +1,7 @@
 <template>
     <div>
         <NavBar />
-        <Slide />
+        <MySlide />
         <div class="thankText">
             <h1>Total price is <span>${{SumPrice}}</span>.</h1>
             <br>
@@ -16,7 +16,7 @@
 
 <script>
     import NavBar from '../components/NavBar'
-    import Slide from '../components/Slide'
+    import MySlide from '../components/MySlide'
     import MyFooter from '../components/MyFooter'
     import {mapState} from 'vuex'
 
@@ -24,7 +24,7 @@
         name:'CheckOut',
         components:{
             NavBar,
-            Slide,
+            MySlide,
             MyFooter,
         },
         computed:{
