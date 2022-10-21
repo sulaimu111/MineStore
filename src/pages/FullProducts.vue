@@ -4,7 +4,8 @@
             <h1>Full Products</h1>
             <div class="productList">
                 <div v-for="p in productList" :key="p.id" class="product">
-                    <img :src="p.location" alt="" style="width:100px; height:100px">
+                    <img :src="require(`../assets/products_img/${p.location}`)" alt="" style="width:100px; height:100px">
+                    <!-- <img :src="p.location" alt="" style="width:100px; height:100px"> -->
                     <!-- <img src="../../public/products_img/Minecraft_cover.png" alt="" style="width:100px; height:100px"> -->
                     <p>{{p.name}}</p>
                     <p style="color:blue;">${{p.price}}</p>
