@@ -96,6 +96,7 @@
         transition: 0.5s;
         text-align: left;
         margin: 0 auto;
+        z-index: 2;
     }
     nav a{
         display: block;

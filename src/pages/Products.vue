@@ -89,9 +89,6 @@
         text-decoration: none;
         /* font-size: 100%; */
     }
-    .VueCarousel-navigation-button {
-        color: skyblue;
-    }
     .slideImg{
             height: 200px;
         }
