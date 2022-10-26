@@ -9,7 +9,7 @@
                     <!-- <img src="../../public/products_img/Minecraft_cover.png" alt="" style="width:100px; height:100px"> -->
                     <p>{{p.name}}</p>
                     <p style="color:blue;">${{p.price}}</p>
-                    <button>Detail</button>
+                    <!-- <button>Detail</button> -->
                     <button class="addBtn" @click="addToCart(p)">Add to cart</button>
                 </div>
             </div>

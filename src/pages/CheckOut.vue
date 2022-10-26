@@ -8,6 +8,7 @@
             <h1>Thank you for your purchase.</h1>
             <br>
             <h1>We will quickly process your orders.</h1>
+            <div class="whitespace"></div>
         </div>
         
         <MyFooter />
@@ -58,6 +59,9 @@
     @media screen and (min-width:768px) {
         .thankText{
             text-align: center;
+        }
+        .whitespace{
+            margin-bottom: 100px;
         }
         
     }
